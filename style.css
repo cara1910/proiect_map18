@@ -1,0 +1,53 @@
+body {
+    font-family: "Afacad Flux", serif;
+    background-color: #f3d9ef;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+button {
+    width: 20%;
+    padding: 10px;
+    background: #d68cc9;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #910b78;
+}
+
+#resultContainer {
+    margin-top: 20px;
+}
+
+#rankingList {
+    list-style: none;
+    padding: 0;
+}

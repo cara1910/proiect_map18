@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performanta Arborilor Binari</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+    <div class="container">
+        <h1>Performanța Arborilor Binari Ordonați</h1>
+        <div class="input-group">
+            <label for="randomInput">Valori aleatorii:</label>
+            <input type="text" id="randomInput" placeholder="Ex: 5,2,8,1">
+        </div>
+        <div class="input-group">
+            <label for="ascendingInput">Valori crescătoare:</label>
+            <input type="text" id="ascendingInput" placeholder="Ex: 1,2,3,4,5">
+        </div>
+        <div class="input-group">
+            <label for="descendingInput">Valori descrescătoare:</label>
+            <input type="text" id="descendingInput" placeholder="Ex: 5,4,3,2,1">
+        </div>
+        <button id="startButton">Start</button>
+       
+        <div id="resultContainer">
+            <h2>Rezultate:</h2>
+            <ul id="rankingList"></ul>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
