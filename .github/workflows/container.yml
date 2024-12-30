@@ -16,6 +16,6 @@ jobs:
     - uses: actions/checkout@v4
     - name: Build and Push the Docker image
       run: |
-        docker login --username cara1910 --password ${{secrets.PAROLA}} ghcr.io
+        docker login --username cara1910 --password ${{secrets.PAROLAA}} ghcr.io
         docker build . --tag ghcr.io/cara1910/proiect_map_18:latest
         docker push ghcr.io/cara1910/proiect_map_18
