@@ -44,6 +44,43 @@ function search(root, key) {
     return search(root.right, key);
 }
 
+function deleteNode(root, key) {
+    operationsCount++; 
+    if (root === null) {
+        return root;
+    }
+
+    operationsCount++;
+    if (key < root.data) {
+        root.left = deleteNode(root.left, key);
+    } else if (key > root.data) {
+        operationsCount++; 
+        root.right = deleteNode(root.right, key);
+    } else {
+        operationsCount++; 
+        if (root.left === null) {
+            return root.right;
+        } else if (root.right === null) {
+            return root.left;
+        }
+
+        operationsCount++; 
+        root.data = findMin(root.right);
+        root.right = deleteNode(root.right, root.data);
+    }
+    return root;
+}
+
+function findMin(root) {
+    let minValue = root.data;
+    while (root.left !== null) {
+        operationsCount++; 
+        minValue = root.left.data;
+        root = root.left;
+    }
+    return minValue;
+}
+
 function getUserInput() {
     //extrag imputurile
     const randomInput = document.getElementById('randomInput').value;
