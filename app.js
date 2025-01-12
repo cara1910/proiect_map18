@@ -1,3 +1,17 @@
+let operationsCount = 0;
+
+function resetOperations() {
+    operationsCount = 0;
+}
+
+class Node {
+    constructor(data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
 function getUserInput() {
     //extrag imputurile
     const randomInput = document.getElementById('randomInput').value;
