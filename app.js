@@ -12,6 +12,23 @@ class Node {
     }
 }
 
+function insert(root, data) {
+    operationsCount++; 
+    if (root === null) {
+        operationsCount++; 
+        return new Node(data);
+    }
+
+    operationsCount++; 
+    if (data < root.data) {
+        root.left = insert(root.left, data);
+    } else if (data > root.data) {
+        operationsCount++; 
+        root.right = insert(root.right, data);
+    }
+    return root;
+}
+
 function getUserInput() {
     //extrag imputurile
     const randomInput = document.getElementById('randomInput').value;
