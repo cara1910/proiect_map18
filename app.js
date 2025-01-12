@@ -29,6 +29,21 @@ function insert(root, data) {
     return root;
 }
 
+function search(root, key) {
+    operationsCount++; 
+    if (root === null || root.data === key) {
+        operationsCount++; 
+        return root;
+    }
+
+    operationsCount++; 
+    if (key < root.data) {
+        return search(root.left, key);
+    }
+
+    return search(root.right, key);
+}
+
 function getUserInput() {
     //extrag imputurile
     const randomInput = document.getElementById('randomInput').value;
