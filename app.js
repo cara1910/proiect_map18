@@ -81,6 +81,31 @@ function findMin(root) {
     return minValue;
 }
 
+function measurePerformance(arr, type) {
+    let root = null;
+
+    //masoara operatiunile de inserare
+    resetOperations();
+    for (let i = 0; i < arr.length; i++) {
+        root = insert(root, arr[i]);
+    }
+    document.getElementById('rankingList').innerHTML += `<li>Performanță Inserare ${type}: ${operationsCount} operațiuni</li>`;
+
+    //masoara operatiunile de cautare
+    resetOperations();
+    for (let i = 0; i < arr.length; i++) {
+        search(root, arr[i]);
+    }
+    document.getElementById('rankingList').innerHTML += `<li>Performanță Căutare ${type}: ${operationsCount} operațiuni</li>`;
+
+    //masoara operatiunile de stergere
+    resetOperations();
+    for (let i = 0; i < arr.length; i++) {
+        root = deleteNode(root, arr[i]);
+    }
+    document.getElementById('rankingList').innerHTML += `<li>Performanță Ștergere ${type}: ${operationsCount} operațiuni</li>`;
+}
+
 function getUserInput() {
     //extrag imputurile
     const randomInput = document.getElementById('randomInput').value;
