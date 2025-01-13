@@ -117,6 +117,10 @@ function getUserInput() {
     const ascArr = ascendingInput.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num));
     const descArr = descendingInput.split(',').map(num => parseInt(num.trim())).filter(num => !isNaN(num));
 
+    //testez perfomanta
+    measurePerformance(randomArr, 'Random');
+    measurePerformance(ascArr, 'Crescător');
+    measurePerformance(descArr, 'Descrescător');
 }
 
 document.getElementById('startButton').addEventListener('click', function() {
