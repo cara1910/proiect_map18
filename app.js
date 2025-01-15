@@ -89,21 +89,21 @@ function measurePerformance(arr, type) {
     for (let i = 0; i < arr.length; i++) {
         root = insert(root, arr[i]);
     }
-    document.getElementById('rankingList').innerHTML += `<li>Performanță Inserare ${type}: ${operationsCount} operațiuni</li>`;
+    document.getElementById('insertList').innerHTML += `<li>${type}: ${operationsCount} operațiuni</li>`;
 
     //masoara operatiunile de cautare
     resetOperations();
     for (let i = 0; i < arr.length; i++) {
         search(root, arr[i]);
     }
-    document.getElementById('rankingList').innerHTML += `<li>Performanță Căutare ${type}: ${operationsCount} operațiuni</li>`;
+    document.getElementById('searchList').innerHTML += `<li>${type}: ${operationsCount} operațiuni</li>`;
 
     //masoara operatiunile de stergere
     resetOperations();
     for (let i = 0; i < arr.length; i++) {
         root = deleteNode(root, arr[i]);
     }
-    document.getElementById('rankingList').innerHTML += `<li>Performanță Ștergere ${type}: ${operationsCount} operațiuni</li>`;
+    document.getElementById('deleteList').innerHTML += `<li>${type}: ${operationsCount} operațiuni</li>`;
 }
 
 function getUserInput() {
@@ -124,6 +124,8 @@ function getUserInput() {
 }
 
 document.getElementById('startButton').addEventListener('click', function() {
-    document.getElementById('rankingList').innerHTML = "";
-    getUserInput(); //sterg vechile rezultate
+    document.getElementById('insertList').innerHTML = "";
+    document.getElementById('searchList').innerHTML = "";
+    document.getElementById('deleteList').innerHTML = "";
+    getUserInput(); 
 });
