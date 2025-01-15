@@ -1,5 +1,7 @@
 # proiect_map18
+
 ## Cerinta
+
     Performanța arborilor binari ordonați – Se dă un arbore binar ordonat care se
 populează cu elemente provenite dintr-un fișier de intrare. Să se determine
 performanța la inserare, căutare și ștergere pentru fiecare dintre următoarele
